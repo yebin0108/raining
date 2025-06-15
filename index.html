@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>비 오는 날</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .ascii-art {
+      cursor: pointer;
+      white-space: pre;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="document.getElementById('rain').play()">소리 재생</button>
+  <!-- 비 오는 소리 삽입 -->
+  <audio id="rain" loop>
+    <source src="rain.mp3" type="audio/mpeg">
+    브라우저가 오디오를 지원하지 않습니다.
+  </audio>
+
+  <!-- 아스키 아트 (우산) -->
+  <div class="ascii-art" onclick="location.href='scene.html'">
+    <pre>
+                       ⢀⣄
+                     ⣀⣀⣿⣿⣶⣶⣶⣶⣶⣤⣤⣀
+               ⢀⣠⣴⣾⣿⣿⠟⢻⡟⠙⢻⣏⠉⠉⠛⠻⢿⣷⣦
+            ⣠⣶⣿⠿⢋⣽⠟⠁⠄⠈⣿⠄⠄⠙⢷⡄⠄⠄⠄⠙⢿⣷⡄
+         ⣠⣾⡿⠋⠄⢠⡿⠁⠄⠄⠄⠄⣿⠄⠄⠄⠈⢿⡀⠄⠄⠄⠈⢿⣿⡀
+       ⣰⣿⠏⠄⠄⣰⣿⠁⠄⠄⠄⠄⠄ ⣿⠄⠄⣀⣀⠘⣷⠄⠄⠄⠄⠸⣿⣇
+     ⣰⣿⠃⠄⠄⢰⣿⣃⣤⣤⣶⣶⣦⣼⣷⣾⠿⠿⠿⢿⣿⣿⠿⠿⢿⣶⣿⣿⣿
+     ⣿⣷⣾⣿⣿⣿⣿⠿⠛⠉⠉⠉⢙⣿⠟       ⠛⠁     ⠙⠿⠃
+     ⠙⠋⠁    ⠙⠋      ⢸⣿
+                      ⢸⣿
+                      ⢸⣿
+                      ⢸⣿      ⣶⣶
+                      ⠘⣿⡄     ⣿⣿
+                        ⠻⣿⣦⣴⣾⠿⠃
+                         ⠈⠉⠉⠁
+                       비가 내린다
+    </pre>
+  </div>
+</body>
+</html>
